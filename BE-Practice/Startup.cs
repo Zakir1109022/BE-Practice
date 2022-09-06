@@ -14,6 +14,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
+using MediatR;
+using BE_Practice.QueryHandlers;
+using System.Reflection;
 
 namespace BE_Practice
 {
@@ -50,8 +53,13 @@ namespace BE_Practice
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IOrderService, OrderService>();
 
             #endregion
+
+
+            // Add MediatR
+            services.AddMediatR(typeof(GetOrderByUserNameHandler).GetTypeInfo().Assembly);
 
         }
 

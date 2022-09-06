@@ -11,6 +11,7 @@ namespace BE_Practice.Controllers
 {
 
     [Route("api/[controller]")]
+    [ApiController]
 
     public class ProductController : Controller
     {
