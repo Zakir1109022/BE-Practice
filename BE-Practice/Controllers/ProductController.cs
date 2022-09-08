@@ -21,7 +21,7 @@ namespace BE_Practice.Controllers
             _productService = productService;
         }
 
-        [Route("List")]
+        [Route("[action]")]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetAll()

@@ -8,7 +8,7 @@ namespace BE_Practice.Services
 {
    public interface IOrderService
     {
-        Task<Order> GetByUserNameAsync(string user_name);
+        Task<Order> GetByIdAsync(string user_name);
         Task CreateAsync(Order order);
     }
 }

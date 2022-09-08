@@ -7,7 +7,7 @@ namespace BE_Practice.Responses
 {
     public class OrderResponse
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string UserName { get; set; }
         public decimal TotalPrice { get; set; }
 

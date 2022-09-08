@@ -15,9 +15,9 @@ namespace BE_Practice.Services
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        public async Task<Order> GetByUserNameAsync(string user_name)
+        public async Task<Order> GetByIdAsync(string id)
         {
-            return await _repository.GetById(user_name);
+            return await _repository.GetById(id);
         }
         public async Task CreateAsync(Order order)
         {

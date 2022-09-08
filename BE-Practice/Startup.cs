@@ -57,9 +57,11 @@ namespace BE_Practice
 
             #endregion
 
+            //Add Automapper
+            services.AddAutoMapper(typeof(Startup));
 
             // Add MediatR
-            services.AddMediatR(typeof(GetOrderByUserNameHandler).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetOrderByIdHandler).GetTypeInfo().Assembly);
 
         }
 

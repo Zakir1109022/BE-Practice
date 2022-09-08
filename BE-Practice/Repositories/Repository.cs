@@ -38,7 +38,8 @@ namespace BE_Practice.Repositories
         public async Task<TDocument> GetById(string id)
         {
             var filter = Builders<TDocument>.Filter.Eq(doc => doc.Id, id);
-            return await _collection.Find(filter).SingleOrDefaultAsync(); ;
+            var result = await _collection.Find(filter).SingleOrDefaultAsync();
+            return result;
         }
 
 

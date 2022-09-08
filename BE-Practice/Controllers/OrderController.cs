@@ -1,4 +1,6 @@
-﻿using BE_Practice.Queries;
+﻿using BE_Practice.Commands;
+using BE_Practice.Entities;
+using BE_Practice.Queries;
 using BE_Practice.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -22,12 +24,20 @@ namespace BE_Practice.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<OrderResponse>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<OrderResponse>>> GetOrdersByUserName(string userName)
+        [ProducesResponseType(typeof(OrderResponse), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<OrderResponse>> GetOrderById(string Id)
         {
-            var query = new GetOrderByUserNameQuery(userName);
-            var orders = await _mediator.Send(query);
-            return Ok(orders);
+            var query = new GetOrderByIdQuery(Id);
+            var order = await _mediator.Send(query);
+            return Ok(order);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(OrderResponse), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> CheckoutOrder([FromBody] CheckoutOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
     }
 }
