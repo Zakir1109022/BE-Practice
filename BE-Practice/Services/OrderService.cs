@@ -15,6 +15,12 @@ namespace BE_Practice.Services
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
+
+        public async Task<IEnumerable<Order>> GetAllAsync()
+        {
+            return await _repository.GetAll();
+        }
+
         public async Task<Order> GetByIdAsync(string id)
         {
             return await _repository.GetById(id);

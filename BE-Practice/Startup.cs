@@ -61,7 +61,7 @@ namespace BE_Practice
             services.AddAutoMapper(typeof(Startup));
 
             // Add MediatR
-            services.AddMediatR(typeof(GetOrderByIdHandler).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(Startup));
 
         }
 

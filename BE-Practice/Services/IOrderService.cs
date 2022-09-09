@@ -8,6 +8,7 @@ namespace BE_Practice.Services
 {
    public interface IOrderService
     {
+        Task<IEnumerable<Order>> GetAllAsync();
         Task<Order> GetByIdAsync(string user_name);
         Task CreateAsync(Order order);
     }

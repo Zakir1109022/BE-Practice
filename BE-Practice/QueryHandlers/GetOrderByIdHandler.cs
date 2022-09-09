@@ -1,4 +1,5 @@
-﻿using BE_Practice.Mapper;
+﻿using BE_Practice.Dtos;
+using BE_Practice.Mapper;
 using BE_Practice.Queries;
 using BE_Practice.Responses;
 using BE_Practice.Services;
@@ -22,10 +23,16 @@ namespace BE_Practice.QueryHandlers
 
         public async Task<OrderResponse> Handle(GetOrderByIdQuery request, CancellationToken cancellationToken)
         {
+            List<OrderDto> orderDtoList = new List<OrderDto>();
             var order = await _orderService.GetByIdAsync(request.Id);
 
-            var orderResponse = OrderMapper.Mapper.Map<OrderResponse>(order);
-            return orderResponse;
+            var orderDto = OrderMapper.Mapper.Map<OrderDto>(order);
+            orderDtoList.Add(orderDto);
+
+            OrderResponse response = new OrderResponse();
+            response.Orders = orderDtoList;
+
+            return response;
         }
     }
 }

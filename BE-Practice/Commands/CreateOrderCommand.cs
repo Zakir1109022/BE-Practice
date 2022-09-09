@@ -1,13 +1,13 @@
-﻿using BE_Practice.Configuration;
+﻿using BE_Practice.Responses;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BE_Practice.Entities
+namespace BE_Practice.Commands
 {
-    [BsonCollection("order")]
-    public class Order: Document
+    public class CreateOrderCommand: IRequest<OrderResponse>
     {
         public string UserName { get; set; }
         public decimal TotalPrice { get; set; }

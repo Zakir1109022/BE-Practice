@@ -23,6 +23,16 @@ namespace BE_Practice.Controllers
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
 
+        [Route("[action]")]
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<OrderResponse>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetAll()
+        {
+            var query = new GetAllOrderQuery();
+            var orderList = await _mediator.Send(query);
+            return Ok(orderList);
+        }
+
         [HttpGet]
         [ProducesResponseType(typeof(OrderResponse), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<OrderResponse>> GetOrderById(string Id)
@@ -34,7 +44,7 @@ namespace BE_Practice.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(OrderResponse), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> CheckoutOrder([FromBody] CheckoutOrderCommand command)
+        public async Task<IActionResult> CheckoutOrder([FromBody] CreateOrderCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);
