@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace BE_Practice.Mapper
 {
-    public class OrderMappingProfile : Profile
+    public class OrderMapping : Profile
     {
-        public OrderMappingProfile()
+        public OrderMapping()
         {
             CreateMap<Order, CreateOrderCommand>().ReverseMap();
             CreateMap<Order, OrderDto>().ReverseMap();
