@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f5CXplzja3IcbdVmezFPW0gtLxeGT1YscfIr4O0G2pAj2m8mA6v2CVKn76nmo9Oc3bjnfmFa+AsiLPfy88is8Q==",
+  "dgSpecHash": "VaoUQGG5pC5Tr4NqjFcX8mge/ADJVFXvHH4GtUnM8gWbv0j7n80tDY8VAxcXzA06Bh3XcA66erklysuuRqp6RA==",
   "success": true,
-  "projectFilePath": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\BE-Practice.csproj",
+  "projectFilePath": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\CQRS-RepositoryPattern.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

@@ -812,9 +812,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\BE-Practice.csproj",
-      "projectName": "BE-Practice",
-      "projectPath": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\BE-Practice.csproj",
+      "projectUniqueName": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\CQRS-RepositoryPattern.csproj",
+      "projectName": "CQRS-RepositoryPattern",
+      "projectPath": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\CQRS-RepositoryPattern.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "G:\\.NET-Core-Practice\\BE-Practice\\BE-Practice\\obj\\",
       "projectStyle": "PackageReference",
