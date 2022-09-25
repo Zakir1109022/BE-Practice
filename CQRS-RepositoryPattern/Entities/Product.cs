@@ -11,7 +11,7 @@ namespace BE_Practice.Entities
     [BsonCollection("product")]
     public class Product:Document
     {
-        public string name { get; set; }
-        public int price { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
     }
 }
